@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: jasperreportstest
+  datasource:
+    url: jdbc:mysql://localhost:3306/employeesdb
+    password: admin
+    username: root
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
