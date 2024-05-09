@@ -4,7 +4,6 @@ import com.james.jasperreportstest.entity.Employee;
 import com.james.jasperreportstest.service.EmployeeService;
 import com.james.jasperreportstest.service.ReportService;
 import lombok.RequiredArgsConstructor;
-import net.sf.jasperreports.engine.JRException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +25,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/report/{format}")
-    public String generateReport(@PathVariable String format) throws JRException, FileNotFoundException {
+    public String generateReport(@PathVariable String format) {
         return reportsService.exportReport(format);
     }
 }

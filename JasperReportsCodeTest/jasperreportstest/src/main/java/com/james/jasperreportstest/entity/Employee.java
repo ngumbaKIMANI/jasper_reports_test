@@ -9,7 +9,6 @@ import java.util.Date;
 
 @Entity
 @Data
-@ToString
 @NoArgsConstructor
 @Table(name = "employees")
 public class Employee {
@@ -18,5 +17,5 @@ public class Employee {
     private String name;
     private  String department;
     private  double salary;
-    private  Date hd;
+    private Date hd;
 }
