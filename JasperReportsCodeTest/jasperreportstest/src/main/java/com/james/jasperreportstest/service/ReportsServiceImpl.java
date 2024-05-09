@@ -41,7 +41,6 @@ public class ReportsServiceImpl implements ReportService {
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(employeeList);
 
         Map<String, Object> parameters = new HashMap<>();
-        JRDataSource datasource;
 
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
 
