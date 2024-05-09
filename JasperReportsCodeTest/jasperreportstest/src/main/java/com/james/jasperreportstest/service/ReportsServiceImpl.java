@@ -25,7 +25,7 @@ public class ReportsServiceImpl implements ReportService {
             //generate report
             return reportExporter.export(employeeList, reportFormat);
         } catch (ReportExportException e) {
-            // e.printStackTrace();
+             e.printStackTrace();
             // Return the exception message to the user
             return e.getMessage();
         }
