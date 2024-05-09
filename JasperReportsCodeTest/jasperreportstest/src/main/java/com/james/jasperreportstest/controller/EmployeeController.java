@@ -2,7 +2,7 @@ package com.james.jasperreportstest.controller;
 
 import com.james.jasperreportstest.entity.Employee;
 import com.james.jasperreportstest.service.EmployeeService;
-import com.james.jasperreportstest.service.ReportsService;
+import com.james.jasperreportstest.service.ReportService;
 import lombok.RequiredArgsConstructor;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class EmployeeController {
     private final EmployeeService employeeService;
-    private final ReportsService reportsService;
+    private final ReportService reportsService;
 
     @GetMapping("/")
     public List<Employee> getAllEmployees(){
